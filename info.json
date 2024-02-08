@@ -1,0 +1,11 @@
+{
+    "name": "AB-Breathe-Easy-Arboretum",
+    "version": "0.0.01",
+    "factorio_version": "1.1",
+    "date": "2024-02-02",
+    "title": "Breathe Easy Arboretum",
+    "author": "AstaZora",
+    "homepage": "",
+    "description": "The beginning of a mod suite, for a broad new experience",
+    "dependencies": ["base >= 1.1"]
+}
