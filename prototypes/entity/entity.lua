@@ -119,7 +119,10 @@ data:extend({
     createChemical("ab-ore-oxidation-plant", "ab-basic-ore-oxidation"),
     createChemical("ab-ore-reduction-plant", "ab-basic-ore-reduction"),
     createChemical("ab-refinery", "ab-refining"),
+    createChemical("composite-preparer", "binding-material-production")
 })
+
+
 
 local charcoalEntity = deepcopy(data.raw["furnace"]["stone-furnace"])
 charcoalEntity.name = "ab-charcoal-furnace"

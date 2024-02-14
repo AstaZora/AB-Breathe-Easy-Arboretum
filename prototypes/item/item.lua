@@ -559,7 +559,37 @@ data:extend({
         durability = 1,
         durability_description_key = "description.science-pack-remaining-amount"
     },
-    
+    --[[--Wooden Transport Belts
+    {
+        type = "item",
+        name = "wooden-transport-belt",
+        icon = "__base__/graphics/icons/transport-belt.png",
+        icon_size = 64,
+        subgroup = "belt",
+        order = "a[transport-belt]-a[wooden-transport-belt]",
+        place_result = "wooden-transport-belt",
+        stack_size = 100
+    },
+    {
+        type = "item",
+        name = "wooden-underground-belt",
+        icon = "__base__/graphics/icons/underground-belt.png",
+        icon_size = 64,
+        subgroup = "belt",
+        order = "b[underground-belt]-a[wooden-underground-belt]",
+        place_result = "wooden-underground-belt",
+        stack_size = 50
+    },
+    {
+        type = "item",
+        name = "wooden-splitter",
+        icon = "__base__/graphics/icons/splitter.png",
+        icon_size = 64,
+        subgroup = "belt",
+        order = "c[splitter]-a[wooden-splitter]",
+        place_result = "wooden-splitter",
+        stack_size = 50
+    },]]
     {
         type = "item",
         name = "medicinal-extracts",
