@@ -646,7 +646,6 @@ data:extend({
         ingredients = {
             {"carbon-fiber", 5},
             {"concentrated-birch-extract", 2},
-            {type="fluid", name="synthetic-biofuel", amount=100},
             {"fiberboard", 5}  -- Replacing advanced circuits with a sustainable alternative.
         },
         result = "biocomposite-research-kit",
@@ -743,34 +742,29 @@ data:extend({
         result_count = 5,
         enabled = false  -- Requires unlocking through research.
     },
--- Medicinal Extracts
-{
-    type = "recipe",
-    name = "ab-medicinal-extracts",
-    icon = "__base__/graphics/icons/fish.png",
-    icon_size = 64, icon_mipmaps = 4,
-    category = "chemistry",
-    energy_required = 5,
-    ingredients = {
-        {"wood-pulp", 5},
-        {type = "fluid", name = "wood-alcohol", amount = 10},
-        {"paper", 2}
-    },
-    results = {
-        {"medicinal-extracts", 1}
-    },
-    crafting_machine_tint = {
-        primary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
-        secondary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
-        tertiary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
-        quaternary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
-    },
-},
-    
-    
-    
-
-            
+    -- Medicinal Extracts
+    {
+        type = "recipe",
+        name = "ab-medicinal-extracts",
+        icon = "__base__/graphics/icons/fish.png",
+        icon_size = 64, icon_mipmaps = 4,
+        category = "chemistry",
+        energy_required = 5,
+        ingredients = {
+            {"wood-pulp", 5},
+            {type = "fluid", name = "wood-alcohol", amount = 10},
+            {"paper", 2}
+        },
+        results = {
+            {"medicinal-extracts", 1}
+        },
+        crafting_machine_tint = {
+            primary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
+            secondary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
+            tertiary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
+            quaternary = {r = 0.2, g = 0.8, b = 0.2, a = 0.5},
+        },
+    },         
     --Stone Age
     -- Crushing
     {
@@ -1617,7 +1611,7 @@ for _, woodType in ipairs(woodTypes) do
 end
 
 local oresToRefine = {"iron", "copper", "tin"}
-local oreRefiningRecipes = {"oxidation", "desalination", "reduction"}
+local oreRefiningRecipes = {"oxidation", "desalination", "reduction", }
 local oreRefiningCategories = {"ab-basic-ore-oxidation", "ab-basic-ore-desalination", "ab-basic-ore-reduction"}
 
 local oreRecipes = {}
@@ -1655,11 +1649,11 @@ for _, fluid in ipairs(fluids) do
         type = "recipe",
         name = "ab-biofuel-" .. fluid,
         category = "ab-biofuel-production",
-        energy_required = 10,
+        energy_required = 4,
         ingredients = {
             {type = "fluid", name = fluid, amount = 10}
         },
-        results = {{type = "fluid", name = "basic-biofuel", amount = result_count * 10}},
+        results = {{type = "fluid", name = "basic-biofuel", amount = result_count * 25}},
         enabled = true,
     })
 end

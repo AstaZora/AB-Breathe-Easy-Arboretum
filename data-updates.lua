@@ -17,13 +17,13 @@ for _, pack in ipairs(vanilla_science_packs) do
 end
 
 -- data-updates.lua
-
 -- Disable all vanilla technologies
 for name, tech in pairs(data.raw["technology"]) do
-    if not string.find(name, "^ab%-") then -- Assuming your custom technologies have an 'ab-' prefix
+    if not (string.find(name, "^ab%-") or string.find(name, "^ac%-")) then
         tech.enabled = false -- Disable the technology
     end
 end
+
 
 for treeName, tree in pairs(data.raw["tree"]) do
     if tree.minable and tree.minable.results then

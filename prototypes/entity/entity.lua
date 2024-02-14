@@ -151,6 +151,7 @@ steam_engine.minable = {mining_time = 0.2, result = "ab-bio-reactor"}
 steam_engine.max_health = 300
 steam_engine.max_power_output = "800kW"
 steam_engine.fluid_usage_per_tick = 0.1
+steam_engine.effectivity = 1
 steam_engine.maximum_temperature = 25
 steam_engine.burns_fluid = true
 steam_engine.fluid_box = {
