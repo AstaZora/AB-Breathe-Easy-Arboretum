@@ -479,3 +479,9 @@ wooden_inserter_copy.minable = {mining_time = 0.1, result = "wooden-inserter"}
 
 data:extend({wooden_inserter_copy})
 
+local wooden_storage_tank = table.deepcopy(data.raw["storage-tank"]["storage-tank"])
+wooden_storage_tank.name = "wooden-storage-tank"
+wooden_storage_tank.fluid_box.base_area = 25
+wooden_storage_tank.minable = {mining_time = 0.1, result = "wooden-storage-tank"}
+
+data:extend({wooden_storage_tank})

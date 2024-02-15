@@ -364,7 +364,7 @@ data:extend({
         category = "crafting",
         energy_required = 0.5,
         ingredients = {{"wooden-boards", 20}},
-        result = "storage-tank",
+        result = "wooden-storage-tank",
         result_count = 1,
     },
     {
@@ -943,17 +943,6 @@ data:extend({
     result = "pipe",
     result_count = 1,
 },
--- Pump
-{
-    type = "recipe",
-    name = "ab-wood-pump",
-    category = "crafting",
-    energy_required = 1,
-    ingredients = {{"wood", 2},{"wooden-gear", 2}},
-    result = "offshore-pump",
-    result_count = 1,
-},
-
 -- Machinery
 -- Basic Tree Farm
 {

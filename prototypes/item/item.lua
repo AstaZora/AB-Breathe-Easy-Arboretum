@@ -1414,6 +1414,17 @@ data:extend({
         order = "c[wood]-ab[wood-pulp]",
         stack_size = 100
     },
+    --wooden storage tank
+    {
+        type = "item",
+        name = "wooden-storage-tank",
+        icon = "__base__/graphics/icons/storage-tank.png",
+        icon_size = 64,
+        subgroup = "storage",
+        order = "a[fluid]-a[storage-tank]",
+        place_result = "wooden-storage-tank",
+        stack_size = 50
+    },
     {
         type = "item",
         name = "bronze-plate",
