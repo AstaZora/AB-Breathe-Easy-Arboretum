@@ -38,46 +38,6 @@ local function createEntity(name, category)
     return base
 end
 
-data:extend({
-    createEntity("ab-basic-tree-farm", "ab-greenhouse"),
-    createEntity("ab-basic-sawmill", "ab-sawmilling"),
-    createEntity("ab-composter", "ab-composting"),
-    createEntity("ab-wood-worker", "ab-woodworking"),
-    createEntity("ab-chemical-plant", "ab-chemistry"),
-    createEntity("ab-grindstone", "ab-grinding"),
-    createEntity("ab-crusher", "ab-crushing"),
-    createEntity("ab-extractor", "ab-extraction"),
-    createEntity("ab-blender", "ab-blending"),
-    createEntity("ab-processor", "ab-processing"),
-    createEntity("ab-wood-gasifier", "ab-wood-gasification"),
-    createEntity("ab-wood-refinery", "ab-wood-refining"),
-    createEntity("ab-bio-press", "ab-biofuel-production"),
-    createEntity("ab-water-siphon", "ab-water-siphoning"),
-    createEntity("ab-wooden-filtration-unit", "ab-wooden-filtration"),
-    createEntity("ab-wooden-desalination-unit", "ab-wooden-desalination"),
-    createEntity("ab-wooden-clarification-unit", "ab-wooden-clarification"),
-    createEntity("ab-wooden-sterilization-unit", "ab-wooden-sterilization"),
-    createEntity("ab-wooden-fermentation-unit", "ab-wooden-fermentation"),
-    createEntity("ab-wooden-distillation-unit", "ab-wooden-distillation"),
-    createEntity("ab-wooden-oxidation-unit", "ab-wooden-oxidation"),
-    createEntity("ab-wooden-reduction-unit", "ab-wooden-reduction"),
-    createEntity("ab-wooden-precipitation-unit", "ab-wooden-precipitation"),
-    createEntity("ab-wooden-adsorption-unit", "ab-wooden-adsorption"),
-    createEntity("ab-wooden-absorption-unit", "ab-wooden-absorption"),
-    createEntity("ab-basic-ore-sorter", "ab-basic-ore-sorting"),
-    createEntity("ab-basic-ore-crusher", "ab-basic-ore-crushing"),
-    createEntity("ab-basic-ore-leaching-plant", "ab-basic-ore-leaching"),
-    createEntity("ab-basic-ore-refinery", "ab-basic-ore-refining"),
-    createEntity("ab-basic-ore-pyrolyzer", "ab-basic-ore-pyrolysis"),
-    createEntity("ab-wood-pyrolyzer", "ab-wood-pyrolysis"),
-    createEntity("ab-basic-ore-gasifier", "ab-basic-ore-gasification"),
-    createEntity("ab-basic-ore-siphon", "ab-basic-ore-siphoning"),
-    createEntity("ab-basic-ore-desalination-unit", "ab-basic-ore-desalination"),
-    createEntity("ab-basic-ore-distillation-unit", "ab-basic-ore-distillation"),
-    createEntity("ab-basic-ore-reduction-unit", "ab-basic-ore-reduction"),
-
-})
-
 local function createChemical(name, category)
     local base = deepcopy(data.raw["assembling-machine"]["chemical-plant"])
     base.name = name
@@ -103,23 +63,105 @@ local function createChemical(name, category)
     return base
 end
 
+local function createFurnace(name, category)
+  local base = deepcopy(data.raw["furnace"]["stone-furnace"])
+  base.name = name
+  base.icon = "__base__/graphics/icons/stone-furnace.png"
+  base.icon_size = 64
+  base.minable = {mining_time = 0.2, result = name}
+  base.crafting_categories = {category}
+  base.crafting_speed = 1
+  base.energy_usage = "90kW"
+  base.source_inventory_size = 1
+  base.result_inventory_size = 1
+  -- Other properties to adjust...
+  return base
+end
+
+local function createCentrifuge(name, category)
+  local base = deepcopy(data.raw["assembling-machine"]["centrifuge"])
+  base.name = name
+  base.icon = "__base__/graphics/icons/centrifuge.png"
+  base.icon_size = 64
+  base.minable = {mining_time = 0.2, result = name}
+  base.crafting_categories = {category}
+  base.crafting_speed = 1
+  base.energy_usage = "350kW"
+  -- Other properties to adjust...
+  return base
+end
+
+local function createOilRefinery(name, category)
+  local base = deepcopy(data.raw["assembling-machine"]["oil-refinery"])
+  base.name = name
+  base.icon = "__base__/graphics/icons/oil-refinery.png"
+  base.icon_size = 64
+  base.minable = {mining_time = 0.2, result = name}
+  base.crafting_categories = {category}
+  base.crafting_speed = 1
+  base.energy_usage = "420kW"
+  base.module_specification =
+  {
+      module_slots = 3,
+      module_info_icon_shift = {0, 0.8}
+  }
+  -- Adjust animation or any other necessary properties...
+  return base
+end
+
 data:extend({
-    createChemical("ab-wood-distillery", "ab-wood-distilling"),
-    createChemical("ab-bio-refinery", "ab-biofuel-production"),
-    createChemical("ab-bio-plastics-plant", "ab-bio-plastic-production"),
-    createChemical("ab-hydrocyclone", "ab-hydrocycloning"),
-    createChemical("ab-basic-ore-filtration-unit", "ab-basic-ore-filtration"),
-    createChemical("ab-basic-ore-clarification-unit", "ab-basic-ore-clarification"),
-    createChemical("ab-sluice-box", "ab-sluicing"),
-    createChemical("ab-ore-leaching-plant", "ab-ore-leaching"),
-    createChemical("ab-ore-refinery", "ab-ore-refining"),
-    createChemical("ab-ore-pyrochamber", "ab-ore-baking"),
-    createChemical("ab-ore-gasifier", "ab-ore-gasification"),
-    createChemical("ab-ore-distillery", "ab-ore-distilling"),
-    createChemical("ab-ore-oxidation-plant", "ab-basic-ore-oxidation"),
-    createChemical("ab-ore-reduction-plant", "ab-basic-ore-reduction"),
-    createChemical("ab-refinery", "ab-refining"),
-    createChemical("composite-preparer", "binding-material-production")
+  createEntity("ab-basic-tree-farm", "ab-greenhouse"),
+  createEntity("ab-basic-sawmill", "ab-sawmilling"),
+  createEntity("ab-composter", "ab-composting"),
+  createEntity("ab-wood-worker", "ab-woodworking"),
+  createEntity("ab-chemical-plant", "ab-chemistry"),
+  createEntity("ab-grindstone", "ab-grinding"),
+  createEntity("ab-crusher", "ab-crushing"),
+  createEntity("ab-extractor", "ab-extraction"),
+  createEntity("ab-blender", "ab-blending"),
+  createEntity("ab-processor", "ab-processing"),
+  createEntity("ab-wood-gasifier", "ab-wood-gasification"),
+  createEntity("ab-wood-refinery", "ab-wood-refining"),
+  createEntity("ab-bio-press", "ab-biofuel-production"),
+  createEntity("ab-water-siphon", "ab-water-siphoning"),
+  createEntity("ab-wooden-filtration-unit", "ab-wooden-filtration"),
+  createEntity("ab-wooden-desalination-unit", "ab-wooden-desalination"),
+  createEntity("ab-wooden-clarification-unit", "ab-wooden-clarification"),
+  createEntity("ab-wooden-sterilization-unit", "ab-wooden-sterilization"),
+  createEntity("ab-wooden-fermentation-unit", "ab-wooden-fermentation"),
+  createEntity("ab-wooden-distillation-unit", "ab-wooden-distillation"),
+  createEntity("ab-wooden-oxidation-unit", "ab-wooden-oxidation"),
+  createEntity("ab-wooden-reduction-unit", "ab-wooden-reduction"),
+  createEntity("ab-wooden-precipitation-unit", "ab-wooden-precipitation"),
+  createEntity("ab-wooden-adsorption-unit", "ab-wooden-adsorption"),
+  createEntity("ab-wooden-absorption-unit", "ab-wooden-absorption"),
+  createEntity("ab-basic-ore-sorter", "ab-basic-ore-sorting"),
+  createEntity("ab-basic-ore-crusher", "ab-basic-ore-crushing"),
+  createEntity("ab-basic-ore-leaching-plant", "ab-basic-ore-leaching"),
+  createEntity("ab-basic-ore-refinery", "ab-basic-ore-refining"),
+  createEntity("ab-basic-ore-pyrolyzer", "ab-basic-ore-pyrolysis"),
+  createEntity("ab-wood-pyrolyzer", "ab-wood-pyrolysis"),
+  createEntity("ab-basic-ore-gasifier", "ab-basic-ore-gasification"),
+  createEntity("ab-basic-ore-siphon", "ab-basic-ore-siphoning"),
+  createEntity("ab-basic-ore-desalination-unit", "ab-basic-ore-desalination"),
+  createEntity("ab-basic-ore-distillation-unit", "ab-basic-ore-distillation"),
+  createEntity("ab-basic-ore-reduction-unit", "ab-basic-ore-reduction"),
+
+  createChemical("ab-wood-distillery", "ab-wood-distilling"),
+  createChemical("ab-bio-refinery", "ab-biofuel-production"),
+  createChemical("ab-bio-plastics-plant", "ab-bio-plastic-production"),
+  createChemical("ab-hydrocyclone", "ab-hydrocycloning"),
+  createChemical("ab-basic-ore-filtration-unit", "ab-basic-ore-filtration"),
+  createChemical("ab-basic-ore-clarification-unit", "ab-basic-ore-clarification"),
+  createChemical("ab-sluice-box", "ab-sluicing"),
+  createChemical("ab-ore-leaching-plant", "ab-ore-leaching"),
+  createChemical("ab-ore-refinery", "ab-ore-refining"),
+  createChemical("ab-ore-pyrochamber", "ab-ore-baking"),
+  createChemical("ab-ore-gasifier", "ab-ore-gasification"),
+  createChemical("ab-ore-distillery", "ab-ore-distilling"),
+  createChemical("ab-ore-oxidation-plant", "ab-basic-ore-oxidation"),
+  createChemical("ab-ore-reduction-plant", "ab-basic-ore-reduction"),
+  createChemical("ab-refinery", "ab-refining"),
 })
 
 

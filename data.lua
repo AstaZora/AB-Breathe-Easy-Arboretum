@@ -31,7 +31,7 @@ removeResource("crude-oil")
 --[[-- data.lua
 
 local woodenBelt = table.deepcopy(data.raw["transport-belt"]["transport-belt"])
-local belt_speed = 0.01042
+local belt_speed = 5 / 480
 woodenBelt.name = "wooden-transport-belt"
 woodenBelt.speed = belt_speed
 woodenBelt.belt_animation_set.animation_set.filename = "__AB-Breathe-Easy-Arboretum__/graphics/entities/wooden-transports/wooden-transport-belt.png"

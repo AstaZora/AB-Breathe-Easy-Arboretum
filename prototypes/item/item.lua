@@ -546,7 +546,8 @@ data:extend({
         order = "a[automation-science-pack]",
         stack_size = 200,
         durability = 1,
-        durability_description_key = "description.science-pack-remaining-amount"
+        durability_description_key = "description.science-pack-remaining-amount-key",
+        durability_description_value = "description.science-pack-remaining-amount-value"
     },
     {
         type = "tool",
@@ -557,7 +558,8 @@ data:extend({
         order = "b[logistic-science-pack]",
         stack_size = 200,
         durability = 1,
-        durability_description_key = "description.science-pack-remaining-amount"
+        durability_description_key = "description.science-pack-remaining-amount-key",
+        durability_description_value = "description.science-pack-remaining-amount-value"
     },
     --[[--Wooden Transport Belts
     {
@@ -1435,6 +1437,15 @@ data:extend({
         name = "bronze-rod",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/bronze-rod.png",
         icon_size = 128,
+        subgroup = "raw-resource",
+        order = "c[wood]-ab[wood-pulp]",
+        stack_size = 50
+    },
+    {
+        type = "item",
+        name = "bronze-gear",
+        icon = "__base__/graphics/icons/iron-gear-wheel.png",
+        icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
         stack_size = 50

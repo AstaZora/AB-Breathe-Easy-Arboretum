@@ -1494,6 +1494,15 @@ data:extend({
     },
     {
         type = "recipe",
+        name = "ab-bronze-gear",
+        category = "crafting",
+        energy_required = 2,
+        ingredients = {{"bronze-plate", 2}},
+        result = "bronze-gear",
+        result_count = 1,
+    },
+    {
+        type = "recipe",
         name = "ab-bronze-rod",
         category = "crafting",
         energy_required = 2,
