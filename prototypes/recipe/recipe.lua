@@ -322,7 +322,7 @@ data:extend({
         category = "crafting",
         energy_required = 0.5,
         ingredients = {{"wooden-boards", 2}},
-        result = "transport-belt",
+        result = "wooden-transport-belt",
         result_count = 1,
     },
     -- Wooden Underground Belt
@@ -332,7 +332,7 @@ data:extend({
         category = "crafting",
         energy_required = 0.5,
         ingredients = {{"wooden-boards", 10}},
-        result = "underground-belt",
+        result = "wooden-underground-belt",
         result_count = 2,
     },
     -- Wooden Splitter
@@ -342,7 +342,7 @@ data:extend({
         category = "crafting",
         energy_required = 0.5,
         ingredients = {{"wooden-boards", 5}},
-        result = "splitter",
+        result = "wooden-splitter",
         result_count = 1,
     },
 -- Tier 3: Advanced Applications

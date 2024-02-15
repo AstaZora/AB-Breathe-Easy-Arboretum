@@ -561,7 +561,7 @@ data:extend({
         durability_description_key = "description.science-pack-remaining-amount-key",
         durability_description_value = "description.science-pack-remaining-amount-value"
     },
-    --[[--Wooden Transport Belts
+    --Wooden Transport Belts
     {
         type = "item",
         name = "wooden-transport-belt",
@@ -591,7 +591,7 @@ data:extend({
         order = "c[splitter]-a[wooden-splitter]",
         place_result = "wooden-splitter",
         stack_size = 50
-    },]]
+    },
     {
         type = "item",
         name = "medicinal-extracts",
