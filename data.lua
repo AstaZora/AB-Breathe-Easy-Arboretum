@@ -54,40 +54,12 @@ wood_belt_animation_set =
 		direction_count = 20
 		}
 	},
-	east_index = 1,
-	west_index = 2,
-	north_index = 3,
-	south_index = 4,
-
-	east_to_north_index = 5,
-	north_to_east_index = 6,
-
-	west_to_north_index = 7,
-	north_to_west_index = 8,
-
-	south_to_east_index = 9,
-	east_to_south_index = 10,
-
-	south_to_west_index = 11,
-	west_to_south_index = 12,
-
-	starting_south_index = 13,
-	ending_south_index = 14,
-
-	starting_west_index = 15,
-	ending_west_index = 16,
-
-	starting_north_index = 17,
-	ending_north_index = 18,
-
-	starting_east_index = 19,
-	ending_east_index = 20
 }
-
 woodBelt.name = "wooden-transport-belt"
 woodBelt.type = "transport-belt"
 woodBelt.speed = belt_speed
-woodBelt.structure_animation_speed_coefficient = 1/3
+woodBelt.health = 10
+woodBelt.structure_animation_speed_coefficient = 1/2
 woodBelt.belt_animation_set.animation_set.filename = "__AB-Breathe-Easy-Arboretum__/graphics/entity/wood-transports/wood-transport-belt.png"
 woodBelt.belt_animation_set.animation_set.hr_version.filename = "__AB-Breathe-Easy-Arboretum__/graphics/entity/wood-transports/hr-wood-transport-belt.png"
 woodBelt.minable = {mining_time = 0.1, result = "wooden-transport-belt"}
@@ -98,6 +70,7 @@ local woodSplitter = table.deepcopy(data.raw["splitter"]["splitter"])
 woodSplitter.name = "wooden-splitter"
 woodBelt.type = "transport-belt"
 woodSplitter.speed = belt_speed
+woodSplitter.health = 20
 woodSplitter.belt_animation_set = wood_belt_animation_set
 woodSplitter.structure_animation_speed_coefficient = 1/3
 -- Assuming you have a specific structure for the splitter graphics, adjust these paths as necessary
@@ -120,6 +93,7 @@ local woodUnderground = table.deepcopy(data.raw["underground-belt"]["underground
 woodUnderground.name = "wooden-underground-belt"
 woodBelt.type = "transport-belt"
 woodUnderground.speed = belt_speed
+woodUnderground.health = 20
 woodUnderground.belt_animation_set = wood_belt_animation_set
 woodUnderground.structure_animation_speed_coefficient = 1/3
 -- Adjust the path for the underground belt graphics
