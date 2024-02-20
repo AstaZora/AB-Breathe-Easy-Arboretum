@@ -488,9 +488,9 @@ data:extend({
         energy_required = 30,
         ingredients = {{"sapling", 1}},
         results = {
-            {type = "item", name = "wood", amount = 10}, 
+            {type = "item", name = "wood", amount = 10, catalyst_amount = 10},
             {type = "item", name = "sapling", amount = 1}, 
-            {type = "item", name = "sapling", 1, probability = 0.01, amount_min = 1, amount_max = 1}
+            {type = "item", name = "sapling", 1, probability = 0.01, amount_min = 1, amount_max = 1, catalyst_amount = 1}
         },  -- Returns 1 sapling to continue the cycle of growth.
     },
     {
@@ -1448,11 +1448,11 @@ for _, woodType in ipairs(woodTypes) do
         subgroup = "ab-greenhousing",
         energy_required = 25,
         ingredients = {
-            {type = "item", name = woodType.. "-sapling", amount = 1}
+            {type = "item", name = woodType.. "-sapling", amount = 1, catalyst_amount = 1},
         },
         results = {
-            {type = "item", name = woodType.. "-wood", amount = 10},
-            {type = "item", name = woodType.. "-sapling", amount = 1},
+            {type = "item", name = woodType.. "-wood", amount = 10, catalyst_amount = 10},
+            {type = "item", name = woodType.. "-sapling", amount = 1, catalyst_amount = 1},
             {type = "item", name = woodType.. "-sapling", amount = 1, probability = 0.01}
         },
         enabled = false -- Requires technology to unlock

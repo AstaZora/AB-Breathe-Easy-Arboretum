@@ -7,6 +7,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "a[wood]-a[pine-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -16,6 +18,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "a[wood]-b[birch-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -25,6 +29,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "a[wood]-c[poplar-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -34,6 +40,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "a[wood]-d[willow-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     -- Tier 2: Mid Game
@@ -44,6 +52,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "b[wood]-a[oak-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -53,6 +63,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "b[wood]-b[maple-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -62,6 +74,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "b[wood]-c[spruce-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -71,6 +85,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "b[wood]-d[cedar-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     -- Tier 3: Advanced Game
@@ -81,6 +97,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-a[mahogany-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -90,6 +108,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-b[teak-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -99,6 +119,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-c[walnut-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -108,6 +130,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-d[ash-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     -- Tier 4: Late Game
@@ -118,6 +142,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "d[wood]-a[ebony-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -127,6 +153,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "d[wood]-b[rosewood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -136,6 +164,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "d[wood]-c[hickory-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -145,6 +175,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "d[wood]-d[bamboo]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     -- Tier 5: End Game
@@ -155,6 +187,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "e[wood]-a[balsa-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -164,6 +198,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "e[wood]-b[cherry-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -173,6 +209,8 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "e[wood]-c[acacia-wood]",
+        fuel_value = "2MJ",
+        fuel_category = "chemical",
         stack_size = 200
     },
     {
@@ -272,7 +310,7 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-m[charcoal]",
-        fuel_value = "8MJ",
+        fuel_value = "2MJ",
         fuel_category = "chemical",
         stack_size = 200
     },
