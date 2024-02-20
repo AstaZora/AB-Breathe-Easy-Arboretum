@@ -1,151 +1,53 @@
 require "prototypes.recipe.fluid-recipe"
 
+-- Define the tiered saplings and their progression
 local woodTiers = {
     -- Tier 1: Early Game - Basic Needs and Simple Construction
-    {
-        name = "pine-sapling",
-        ingredients = {{"sapling", 10}},
-        result_count = 1,
-    },
-    {
-        name = "birch-sapling",
-        ingredients = {{"sapling", 10}},
-        result_count = 1,
-    },
-    {
-        name = "poplar-sapling",
-        ingredients = {{"sapling", 10}},
-        result_count = 1,
-    },
-    {
-        name = "willow-sapling",
-        ingredients = {{"sapling", 10}},
-        result_count = 1,
-    },
+    {name = "pine-sapling", ingredients = {{"sapling", 10}}, result_count = 1},
+    {name = "birch-sapling", ingredients = {{"sapling", 10}}, result_count = 1},
+    {name = "poplar-sapling", ingredients = {{"sapling", 10}}, result_count = 1},
+    {name = "willow-sapling", ingredients = {{"sapling", 10}}, result_count = 1},
+    -- Tier 2: Mid Game - Infrastructure and Efficiency Improvements
+    {name = "oak-sapling", ingredients = {{"pine-sapling", 10}}, result_count = 1},
+    {name = "maple-sapling", ingredients = {{"birch-sapling", 10}}, result_count = 1},
+    {name = "spruce-sapling", ingredients = {{"poplar-sapling", 10}}, result_count = 1},
+    {name = "cedar-sapling", ingredients = {{"willow-sapling", 10}}, result_count = 1},
+    -- Tier 3: Advanced Game - Specialty Crafting and High-End Uses
+    {name = "mahogany-sapling", ingredients = {{"oak-sapling", 10}}, result_count = 1},
+    {name = "teak-sapling", ingredients = {{"maple-sapling", 10}}, result_count = 1},
+    {name = "walnut-sapling", ingredients = {{"spruce-sapling", 10}}, result_count = 1},
+    {name = "ash-sapling", ingredients = {{"cedar-sapling", 10}}, result_count = 1},
+    -- Tier 4: Specialized and High-End Uses
+    {name = "ebony-sapling", ingredients = {{"mahogany-sapling", 10}}, result_count = 1},
+    {name = "rose-sapling", ingredients = {{"teak-sapling", 10}}, result_count = 1},
+    {name = "hickory-sapling", ingredients = {{"walnut-sapling", 10}}, result_count = 1},
+    {name = "bamboo-sapling", ingredients = {{"ash-sapling", 10}}, result_count = 1},
+    --Tier 5: Exotic and Rare Applications
+    {name = "balsa-sapling", ingredients = {{"ebony-sapling", 10}}, result_count = 1},
+    {name = "cherry-sapling", ingredients = {{"rose-sapling", 10}}, result_count = 1},
+    {name = "olive-sapling", ingredients = {{"bamboo-sapling", 10}}, result_count = 1},
+    {name = "acacia-sapling", ingredients = {{"hickory-sapling", 10}}, result_count = 1},  -- Moved for progression consistency
 }
 
--- Tier 2: Mid Game - Infrastructure and Efficiency Improvements
-local previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "oak-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "maple-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "spruce-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "cedar-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
--- Tier 3: Advanced Game - Specialty Crafting and High-End Uses
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "mahogany-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "teak-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "walnut-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "ash-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "ebony-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "rose-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "bamboo-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "balsa-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "cherry-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "acacia-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
-previousTier = woodTiers[#woodTiers]
-woodTiers[#woodTiers + 1] = {
-    name = "olive-sapling",
-    ingredients = {{previousTier.name, 10}},
-    result_count = previousTier.result_count,
-}
-
--- Convert woodTiers to data:extend format
+-- Dynamically generate and extend recipes based on the defined tiers
 local recipes = {}
+
 for _, tier in ipairs(woodTiers) do
     table.insert(recipes, {
         type = "recipe",
         name = tier.name,
-        category = "crafting",
-        energy_required = 0.5,
+        category = "crafting",  -- Assuming some of these saplings might use fluid ingredients or crafting stations
+        energy_required = 0.5,  -- Adjust as necessary for balance
         ingredients = tier.ingredients,
         result = tier.name,
         result_count = tier.result_count,
+        enabled = true, 
     })
 end
 
 data:extend(recipes)
+
+
 data:extend({
 -- Tier 1: Basic Applications
     -- Wooden Planks
