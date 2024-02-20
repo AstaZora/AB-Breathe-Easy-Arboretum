@@ -1267,6 +1267,16 @@ data:extend({
         result = "ab-basic-ore-clarification-unit",
         result_count = 1,
     },
+    {
+        type = "recipe",
+        name = "ab-ore-refinery",
+        enabled = false,
+        category = "advanced-crafting",
+        energy_required = 1,
+        ingredients = {{"stone", 5}, {"wood", 10}},
+        result = "ab-ore-refinery",
+        result_count = 1,
+    },
     --Fertilizer Beacon
     {
         type = "recipe",
@@ -1353,10 +1363,12 @@ data:extend({
         category = "ab-hydrocycloning",
         subgroup = "ab-ore-refinery",
         energy_required = 25, 
-        ingredients = {{type = "fluid", name = "mineralized-water", amount = 100}},
+        main_product = "mixed-ore-powder",
+        catalyst = "mineralized-water",
+        ingredients = {{type = "fluid", name = "mineralized-water", amount = 100, catalyst_amount = 100}},
         results = {
             {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1},
-            {type = "fluid", name = "ore-waste-water", amount = 50}
+            {type = "fluid", name = "ore-waste-water", amount = 50, catalyst_amount = 50}
         }
     },
     {
@@ -1367,9 +1379,11 @@ data:extend({
         category = "ab-hydrocycloning",
         subgroup = "ab-ore-refinery",
         energy_required = 10,
-        ingredients = {{type = "fluid", name = "ore-waste-water", amount = 20}},
+        main_product = "mixed-ore-powder",
+        catalyst = "ore-waste-water",
+        ingredients = {{type = "fluid", name = "ore-waste-water", amount = 20, catalyst_amount = 20}},
         results = {
-            {type = "fluid", name = "ore-slush", amount = 10},
+            {type = "fluid", name = "ore-slush", amount = 10, catalyst_amount = 10},
             {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
         }
     },
@@ -1381,12 +1395,14 @@ data:extend({
         category = "ab-basic-ore-filtration",
         subgroup = "ab-ore-refinery",
         energy_required = 10,
+        main_product = "mixed-ore-powder",
+        catalyst = "ore-slush",
         ingredients = {
-            {type = "fluid", name = "ore-slush", amount = 10}
+            {type = "fluid", name = "ore-slush", amount = 10, catalyst_amount = 10}
         },
         results = {
-            {type = "fluid", name = "water", amount = 50},
-            {type = "fluid", name = "ore-slurry", amount = 10},
+            {type = "fluid", name = "water", amount = 50, catalyst_amount = 50},
+            {type = "fluid", name = "ore-slurry", amount = 10, catalyst_amount = 10},
             {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
         }
     },
@@ -1398,12 +1414,14 @@ data:extend({
         category = "ab-ore-baking",
         subgroup = "ab-ore-refinery",
         energy_required = 10,
+        main_product = "mixed-ore-powder",
+        catalyst = "ore-slurry",
         ingredients = {
-            {type = "fluid", name = "ore-slurry", amount = 10}
+            {type = "fluid", name = "ore-slurry", amount = 10, catalyst_amount = 10}
         },
         results = {
-            {type = "fluid", name = "water", amount = 50},
-            {type = "fluid", name = "ore-concentrate", amount = 10},
+            {type = "fluid", name = "water", amount = 50, catalyst_amount = 50},
+            {type = "fluid", name = "ore-concentrate", amount = 10, catalyst_amount = 10},
             {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
         }
     },
@@ -1415,11 +1433,13 @@ data:extend({
         category = "ab-basic-ore-clarification",
         subgroup = "ab-ore-refinery",
         energy_required = 10,
+        main_product = "mixed-ore-powder",
+        catalyst = "ore-concentrate",
         ingredients = {
-            {type = "fluid", name = "ore-concentrate", amount = 10}
+            {type = "fluid", name = "ore-concentrate", amount = 10, catalyst_amount = 10}
         },
         results = {
-            {type = "fluid", name = "water", amount = 50},
+            {type = "fluid", name = "water", amount = 50, catalyst_amount = 50},
             {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
         }
     },
