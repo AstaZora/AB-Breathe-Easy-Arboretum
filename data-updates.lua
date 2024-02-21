@@ -21,6 +21,7 @@ end
 for name, tech in pairs(data.raw["technology"]) do
     if not (string.find(name, "^ab%-") or string.find(name, "^ac%-")) then
         tech.enabled = false -- Disable the technology
+        tech.visible_when_disabled = false -- Make it invisible in the tech tree
     end
 end
 
