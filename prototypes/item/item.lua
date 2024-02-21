@@ -225,8 +225,8 @@ data:extend({
     {
         type = "item",
         name = "sawdust",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sawdust.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-e[sawdust]",
         stack_size = 200
@@ -234,8 +234,8 @@ data:extend({
     {
         type = "item",
         name = "wood-chips",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-chips.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-f[wood-chips]",
         stack_size = 200
@@ -243,8 +243,8 @@ data:extend({
     {
         type = "item",
         name = "wood-pellets",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-pellets.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-g[wood-pellets]",
         stack_size = 200
@@ -252,8 +252,8 @@ data:extend({
     {
         type = "item",
         name = "wood-veneer",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-veneer.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-h[wood-veneer]",
         stack_size = 200
@@ -261,8 +261,8 @@ data:extend({
     {
         type = "item",
         name = "plywood",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/plywood.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-i[plywood]",
         stack_size = 200
@@ -416,7 +416,7 @@ data:extend({
     {
         type = "item",
         name = "wooden-planks",
-        icon = "__base__/graphics/icons/wood.png",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
         icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-s[wooden-boards]",
@@ -425,8 +425,8 @@ data:extend({
     {
         type = "item",
         name = "wooden-boards",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-t[wooden-boards]",
         stack_size = 200
@@ -497,8 +497,8 @@ data:extend({
     {
         type = "item",
         name = "paper",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/paper.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-aa[paper]",
         stack_size = 200
@@ -506,8 +506,8 @@ data:extend({
     {
         type = "item",
         name = "wood-pulp",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-pulp.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
         stack_size = 200
@@ -633,8 +633,8 @@ data:extend({
     {
         type = "item",
         name = "medicinal-extracts",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/medicinal-extracts.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
         stack_size = 100
@@ -1418,8 +1418,8 @@ data:extend({
     {
         type = "item",
         name = "fertilizer",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/fertilizer.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
         stack_size = 100
