@@ -47,7 +47,7 @@ for treeName, tree in pairs(data.raw["tree"]) do
         tree.minable = {
             mining_time = 1,
             results = {
-                {name = "sapling", probability = 0.001, amount_min = 1, amount_max = 1}
+                {name = "sapling", probability = 0.01, amount_min = 1, amount_max = 1}
             }
         }
     end
