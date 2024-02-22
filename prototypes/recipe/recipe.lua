@@ -192,7 +192,7 @@ data:extend({
         icon = "__base__/graphics/icons/assembling-machine-2.png",
         icon_size = 64,
         energy_required = 10,
-        ingredients = {{"plywood", 10}, {"hardwood-planks", 5}},
+        ingredients = {{"plywood", 10}, {"hardwood-planks", 5}, {"assembling-machine-1", 1}},
         result = "assembling-machine-2",
         result_count = 1,
         enabled = false
@@ -203,7 +203,7 @@ data:extend({
         name = "ab-wooden-inserter",
         category = "crafting",
         energy_required = 0.5,
-        ingredients = {{"wooden-boards", 5}, {"fiberboard-circuitry", 2}},
+        ingredients = {{"wooden-boards", 5}, {"fiberboard-circuitry", 2}, {"burner-inserter", 1}},
         result = "wooden-inserter",
         result_count = 1,
         enabled = false
@@ -524,6 +524,17 @@ data:extend({
             {type="fluid", name="essential-oils", amount=50},
         },
     },
+    --Birch Extract
+    {
+        type = "recipe",
+        name = "ab-concentrated-birch-extract",
+        category = "ab-extraction",
+        energy_required = 5,
+        ingredients = {{"birch-wood", 2}},
+        results = {
+            {type="item", name="concentrated-birch-extract", amount=1},
+        },
+    },
     {
         type = "recipe",
         name = "ab-biofuel",
@@ -563,7 +574,7 @@ data:extend({
             {"fiberboard", 5}  -- Replacing advanced circuits with a sustainable alternative.
         },
         result = "biocomposite-research-kit",
-        result_count = 1,
+        result_count = 5,
         enabled = false
     },
     --Material Components
@@ -635,7 +646,7 @@ data:extend({
     {
         type = "recipe",
         name = "ab-carbon-fiber",
-        category = "ab-advanced-wood-refining",
+        category = "ab-wood-refining",
         energy_required = 20,
         ingredients = {{"lignin", 10}},
         result = "carbon-fiber",
@@ -663,7 +674,7 @@ data:extend({
         type = "recipe",
         name = "ab-medicinal-extracts",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/medicinal-extracts.png",
-        icon_size = 128, icon_mipmaps = 4,
+        icon_size = 128, icon_mipmaps = 1,
         category = "chemistry",
         energy_required = 5,
         ingredients = {
@@ -1183,6 +1194,39 @@ data:extend({
         result = "ab-basic-ore-clarification-unit",
         result_count = 1,
     },
+    --Ore Reduction Plant
+    {
+        type = "recipe",
+        name = "ab-ore-reduction-plant",
+        enabled = false,
+        category = "advanced-crafting",
+        energy_required = 1,
+        ingredients = {{"stone", 5}, {"wood", 10}},
+        result = "ab-ore-reduction-plant",
+        result_count = 1,
+    },
+    --Basic Desalination Plant
+    {
+        type = "recipe",
+        name = "ab-basic-desalination-plant",
+        enabled = false,
+        category = "advanced-crafting",
+        energy_required = 1,
+        ingredients = {{"stone", 5}, {"wood", 10}},
+        result = "ab-basic-ore-desalination-unit",
+        result_count = 1,
+    },
+    --Ore Oxidation Plant
+    {
+        type = "recipe",
+        name = "ab-ore-oxidation-plant",
+        enabled = false,
+        category = "advanced-crafting",
+        energy_required = 1,
+        ingredients = {{"stone", 5}, {"wood", 10}},
+        result = "ab-ore-oxidation-plant",
+        result_count = 1,
+    },
     {
         type = "recipe",
         name = "ab-ore-refinery",
@@ -1243,6 +1287,8 @@ data:extend({
         name = "ab-wooden-boards",
         enabled = false,
         category = "crafting",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
+        icon_size = 128, icon_mipmaps = 1,
         energy_required = 1,
         ingredients = {{"wood", 1}},
         result = "wooden-boards",
@@ -1480,6 +1526,8 @@ for _, woodType in ipairs(woodTypes) do
     table.insert(woodPlanksRecipes, {
         type = "recipe",
         name = "ab-"..woodType.."-wood-planks",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
+        icon_size = 128, icon_mipmaps = 1,
         category = "ab-sawmilling",
         energy_required = 5,
         ingredients = {{woodType.."-wood", 1}},
@@ -1509,6 +1557,8 @@ for _, woodType in ipairs(woodTypes) do
     table.insert(woodChipRecipes, {
         type = "recipe",
         name = "ab-wood-chips-"..woodType,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-chips.png",
+        icon_size = 128, icon_mipmaps = 1,
         enabled = false,
         category = "ab-sawmilling",
         energy_required = 1,

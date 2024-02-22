@@ -597,4 +597,31 @@ data:extend({
         },
         order = "a-b-x"
     },
+    --Refining Ores
+    {
+        type = "technology",
+        name = "ab-ore-refining",
+        icon = "__base__/graphics/technology/automation-2.png",  -- Placeholder icon
+        icon_size = 256, icon_mipmaps = 4,
+        prerequisites = {"ab-basic-ore-clarification"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "ab-ore-oxidation-plant",
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "ab-basic-desalination-plant"
+            },
+            {
+                type = "unlock-recipe",
+                recipe = "ab-ore-reduction-plant"
+            }
+        },
+        unit = {
+            count = 1000,
+            time = 60,
+            ingredients = {{"research-kit", 1}, {"biocomposite-research-kit", 1}},
+        },
+    },
 })
