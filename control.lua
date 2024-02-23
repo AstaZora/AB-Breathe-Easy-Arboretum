@@ -6,7 +6,7 @@ script.on_init(function()
         remote.call("freeplay", "set_created_items", {
             ["wood"] = 200,
             ["small-electric-pole"] = 4,
-            ["lab"] = 1,
+            ["wooden-lab"] = 1,
             ["modular-armor"] = 1,
             ["personal-roboport-equipment"] = 2,
             ["construction-robot"] = 20,

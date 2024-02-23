@@ -470,6 +470,7 @@ filter_inserter_copy.energy_per_rotation = "5kJ"
 filter_inserter_copy.rotation_speed = 0.01
 filter_inserter_copy.extension_speed = 0.035
 filter_inserter_copy.filter_count = 1
+filter_inserter_copy.minable = {mining_time = 0.1, result = "slow-filter-inserter"}
 
 data:extend({filter_inserter_copy})
 
@@ -485,3 +486,11 @@ wooden_storage_tank.fluid_box.base_area = 25
 wooden_storage_tank.minable = {mining_time = 0.1, result = "wooden-storage-tank"}
 
 data:extend({wooden_storage_tank})
+
+local wooden_lab = table.deepcopy(data.raw["lab"]["lab"])
+wooden_lab.name = "wooden-lab"
+wooden_lab.minable = {mining_time = 0.1, result = "wooden-lab"}
+wooden_lab.crafting_speed = 0.5
+wooden_lab.inputs = {"research-kit", "biocomposite-research-kit"}
+
+data:extend({wooden_lab})

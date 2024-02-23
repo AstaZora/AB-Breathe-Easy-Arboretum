@@ -25,6 +25,12 @@ for name, tech in pairs(data.raw["technology"]) do
     end
 end
 
+for _, item in pairs(data.raw.item) do
+    item.enabled = false
+end
+for _, recipe in pairs(data.raw.recipe) do
+    recipe.enabled = false
+end
 
 for treeName, tree in pairs(data.raw["tree"]) do
     if tree.minable and tree.minable.results then
