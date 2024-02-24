@@ -429,6 +429,8 @@ data:extend({
         type = "recipe",
         name = "ab-cellulose",
         category = "ab-wood-refining",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/cellulose.png",
+        icon_size = 128, icon_mipmaps = 1,
         energy_required = 5,
         ingredients = {
             {"wood-chips", 5},
@@ -442,6 +444,8 @@ data:extend({
         type = "recipe",
         name = "ab-lignin",
         category = "ab-wood-refining",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/lignin.png",
+        icon_size = 128, icon_mipmaps = 1,
         energy_required = 5,
         ingredients = {
             {"wood-chips", 5},
@@ -455,6 +459,8 @@ data:extend({
         type = "recipe",
         name = "ab-resin",
         category = "ab-wood-refining",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/resin.png",
+        icon_size = 128, icon_mipmaps = 1,
         energy_required = 8,
         ingredients = {
             {"softwood-lumber", 5},
@@ -509,6 +515,8 @@ data:extend({
         type = "recipe",
         name = "ab-wood-tar",
         category = "ab-extraction",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-tar.png",
+        icon_size = 128, icon_mipmaps = 1,
         energy_required = 10,
         ingredients = {{"oak-wood", 4}, {"pine-wood", 4}},
         result = "wood-tar",
@@ -529,6 +537,8 @@ data:extend({
         type = "recipe",
         name = "ab-concentrated-birch-extract",
         category = "ab-extraction",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/concentrated-birch-extract.png",
+        icon_size = 128, icon_mipmaps = 1,
         energy_required = 5,
         ingredients = {{"birch-wood", 2}},
         results = {
@@ -647,6 +657,8 @@ data:extend({
         type = "recipe",
         name = "ab-carbon-fiber",
         category = "ab-wood-refining",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/carbon-fiber.png",
+        icon_size = 128, icon_mipmaps = 1,
         energy_required = 20,
         ingredients = {{"lignin", 10}},
         result = "carbon-fiber",

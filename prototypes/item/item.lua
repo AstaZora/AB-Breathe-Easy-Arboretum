@@ -326,8 +326,8 @@ data:extend({
     {
         type = "item",
         name = "cellulose",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/cellulose.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-p[cellulose]",
         stack_size = 200
@@ -335,8 +335,8 @@ data:extend({
     {
         type = "item",
         name = "lignin",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/lignin.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-q[lignin]",
         stack_size = 200
@@ -344,8 +344,8 @@ data:extend({
     {
         type = "item",
         name = "resin",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/resin.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-r[resin]",
         stack_size = 200
@@ -362,8 +362,8 @@ data:extend({
     {
         type = "item",
         name = "wood-tar",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-tar.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-t[wood-tar]",
         stack_size = 200
@@ -417,7 +417,7 @@ data:extend({
         type = "item",
         name = "wooden-planks",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
-        icon_size = 64,
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-s[wooden-boards]",
         stack_size = 200
@@ -642,8 +642,8 @@ data:extend({
     {
         type = "item",
         name = "carbon-fiber",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/carbon-fiber.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
         stack_size = 100
@@ -651,8 +651,8 @@ data:extend({
     {
         type = "item",
         name = "concentrated-birch-extract",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/concentrated-birch-extract.png",
+        icon_size = 128, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
         stack_size = 100
