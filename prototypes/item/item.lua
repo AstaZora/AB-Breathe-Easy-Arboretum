@@ -417,7 +417,7 @@ data:extend({
         type = "item",
         name = "wooden-planks",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
-        icon_size = 128, mipmap_count = 1,
+        icon_size = 256, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-s[wooden-boards]",
         stack_size = 200
@@ -426,7 +426,7 @@ data:extend({
         type = "item",
         name = "wooden-boards",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
-        icon_size = 128, mipmap_count = 1,
+        icon_size = 256, mipmap_count = 1,
         subgroup = "raw-resource",
         order = "c[wood]-t[wooden-boards]",
         stack_size = 200
@@ -514,65 +514,47 @@ data:extend({
     },
     {
         type = "item",
-        name = "ab-wooden-boards",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        name = "wooden-boards",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-board.png",
+        icon_size = 256, mipmap_count = 1,
         subgroup = "intermediate-product",
         order = "a[wooden-boards]",
         stack_size = 100
     },
     {
         type = "item",
-        name = "ab-wooden-frames",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        name = "wooden-frames",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-frame.png",
+        icon_size = 256, mipmap_count = 1,
         subgroup = "intermediate-product",
         order = "a[wooden-frames]",
         stack_size = 100
     },
     {
         type = "item",
-        name = "ab-wooden-beams",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        name = "wooden-beams",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-beam.png",
+        icon_size = 256, mipmap_count = 1,
         subgroup = "intermediate-product",
         order = "a[wooden-beams]",
         stack_size = 100
     },
     {
         type = "item",
-        name = "ab-wooden-panels",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        name = "wooden-panels",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-panel.png",
+        icon_size = 256, mipmap_count = 1,
         subgroup = "intermediate-product",
         order = "a[wooden-panels]",
         stack_size = 100
     },
     {
         type = "item",
-        name = "ab-wooden-joists",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-joists]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "ab-wooden-trusses",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
+        name = "wooden-trusses",
+        icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/wood-truss.png",
+        icon_size = 256, mipmap_count = 1,
         subgroup = "intermediate-product",
         order = "a[wooden-trusses]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "ab-wooden-rafters",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-rafters]",
         stack_size = 100
     },
     {
@@ -664,60 +646,6 @@ data:extend({
         icon_size = 64,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "wooden-frames",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-frames]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "wooden-beams",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-beams]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "wooden-panels",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-panels]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "wooden-joists",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-joists]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "wooden-trusses",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-trusses]",
-        stack_size = 100
-    },
-    {
-        type = "item",
-        name = "wooden-rafters",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "intermediate-product",
-        order = "a[wooden-rafters]",
         stack_size = 100
     },
     {

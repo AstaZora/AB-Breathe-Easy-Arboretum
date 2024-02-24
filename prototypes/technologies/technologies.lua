@@ -301,6 +301,26 @@ data:extend({
         },
         order = "a-b-i"
     },
+    -- Tier Two Boards
+    {
+        type = "technology",
+        name = "ab-advanced-wooden-boards",
+        icon = "__base__/graphics/technology/automation-1.png",  -- Placeholder icon
+        icon_size = 256, icon_mipmaps = 4,
+        prerequisites = {"ab-arboretum-wooden-boards", "ab-wood-refining"},
+        effects = {
+            {
+                type = "unlock-recipe",
+                recipe = "ab-oak-wood-boards"
+            },
+        },
+        unit = {
+            count = 400,
+            time = 60,
+            ingredients = {{"research-kit", 1}, {"biocomposite-research-kit", 1}},
+        },
+        order = "a-b-j"
+    },
     {
         type = "technology",
         name = "ab-woodworking",
