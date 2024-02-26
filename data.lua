@@ -59,7 +59,7 @@ woodBelt.name = "wooden-transport-belt"
 woodBelt.type = "transport-belt"
 woodBelt.speed = belt_speed
 woodBelt.health = 10
-woodBelt.structure_animation_speed_coefficient = 1/2
+woodBelt.structure_animation_speed_coefficient = 1
 woodBelt.belt_animation_set.animation_set.filename = "__AB-Breathe-Easy-Arboretum__/graphics/entity/wood-transports/wood-transport-belt.png"
 woodBelt.belt_animation_set.animation_set.hr_version.filename = "__AB-Breathe-Easy-Arboretum__/graphics/entity/wood-transports/hr-wood-transport-belt.png"
 woodBelt.minable = {mining_time = 0.1, result = "wooden-transport-belt"}

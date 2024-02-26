@@ -17,20 +17,25 @@ for _, pack in ipairs(vanilla_science_packs) do
 end
 
 -- data-updates.lua
--- Disable all vanilla technologies
+-- Disable all vanilla technologies except those starting with ab-, ac-, or ad-
 for name, tech in pairs(data.raw["technology"]) do
-    if not (string.find(name, "^ab%-") or string.find(name, "^ac%-")) then
+    -- Check if the technology starts with ab-, ac-, or ad-
+    if name:find("^ab%-") or name:find("^ac%-") or name:find("^ad%-") then
+        tech.enabled = true -- Enable the technology
+        tech.visible_when_disabled = true -- Make it visible in the tech tree
+    else
         tech.enabled = false -- Disable the technology
         tech.visible_when_disabled = false -- Make it invisible in the tech tree
     end
 end
 
-for _, item in pairs(data.raw.item) do
+
+--[[for _, item in pairs(data.raw.item) do
     item.enabled = false
 end
 for _, recipe in pairs(data.raw.recipe) do
     recipe.enabled = false
-end
+end]]
 
 for treeName, tree in pairs(data.raw["tree"]) do
     if tree.minable and tree.minable.results then

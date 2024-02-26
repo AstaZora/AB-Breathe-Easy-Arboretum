@@ -290,7 +290,7 @@ data:extend({
 	{
 		type = "recipe-category",
 		name = "ab-basic-ore-reduction",
-	},	
+	},
 	{
 		type = "item-group",
 		name = "ab-fluid-recipes",
