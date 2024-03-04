@@ -16,8 +16,23 @@ for _, pack in ipairs(vanilla_science_packs) do
     end
 end
 
--- data-updates.lua
--- Disable all vanilla technologies except those starting with ab-, ac-, or ad-
+for name, tech in pairs(data.raw.technology) do
+    if not (
+        name:find("^ab%-") or
+        name:find("^ac%-") or
+        name:find("^ad%-") or
+        name:find("^ah%-") or
+        name:find("^aa%-") or
+        name:find("^acg%-")
+    ) then
+        tech.enabled = false
+        tech.hidden = true
+    end
+end
+
+
+--Old Code, no longer necessary but keeping it incase it's useful later
+--[[ Disable all vanilla technologies except those starting with ab-, ac-, or ad-
 for name, tech in pairs(data.raw["technology"]) do
     -- Check if the technology starts with ab-, ac-, or ad-
     if name:find("^ab%-") or name:find("^ac%-") or name:find("^ad%-") then
@@ -27,7 +42,7 @@ for name, tech in pairs(data.raw["technology"]) do
         tech.enabled = false -- Disable the technology
         tech.visible_when_disabled = false -- Make it invisible in the tech tree
     end
-end
+end]]
 
 
 --[[for _, item in pairs(data.raw.item) do

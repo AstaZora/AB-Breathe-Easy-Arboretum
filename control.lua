@@ -16,6 +16,3 @@ script.on_init(function()
     end
 end)
 
-
-
-
