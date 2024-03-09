@@ -1216,6 +1216,7 @@ data:extend({
         subgroup = "production-machine",
         order = "a[assembling-machine-1]",
         stack_size = 50,
+        place_result = "ab-fertilizer-distributor"
     },
     {
         type = "item",

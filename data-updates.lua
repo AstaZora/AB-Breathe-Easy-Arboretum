@@ -79,25 +79,7 @@ for treeName, tree in pairs(data.raw["tree"]) do
     end
 end
 
-
---[[ Enable your custom technologies
-data.raw["technology"]["ab-arboretum-basic-technology"].enabled = true
-data.raw["technology"]["ab-advanced-tree-farm-technology"].enabled = true
-data.raw["technology"]["ab-arboretum-sawmilling-technology"].enabled = true
-data.raw["technology"]["ab-advanced-sawmilling-technology"].enabled = true
-data.raw["technology"]["ab-arboretum-wooden-boards-technology"].enabled = true
-data.raw["technology"]["ab-arboretum-organic-mulch-technology"].enabled = true
-data.raw["technology"]["ab-composter-technology"].enabled = true
-data.raw["technology"]["ab-wood-worker-technology"].enabled = true
-data.raw["technology"]["ab-wood-refinery-technology"].enabled = true
-data.raw["technology"]["ab-chemical-plant-technology"].enabled = true
-data.raw["technology"]["ab-biomass-processing-technology"].enabled = true
-data.raw["technology"]["ab-grindstone-technology"].enabled = true
-data.raw["technology"]["ab-crusher-technology"].enabled = true
-data.raw["technology"]["ab-charcoal-furnace-technology"].enabled = true
-data.raw["technology"]["ab-advanced-charcoal-furnace-technology"].enabled = true
-
--- Add similar lines for any other custom technologies you've added
---]]
 table.insert(data.raw["lab"]["lab"].inputs, "research-kit")
 table.insert(data.raw["lab"]["lab"].inputs, "biocomposite-research-kit")
+
+data.raw["beacon"]["invisible-beacon"].selectable_in_game = false

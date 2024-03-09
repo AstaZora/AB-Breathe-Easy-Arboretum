@@ -1278,7 +1278,7 @@ data:extend({
     icon = "__base__/graphics/icons/landfill.png",
     icon_size = 64, icon_mipmaps = 4,
     enabled = true,
-    category = "advanced-crafting",
+    category = "fertilizer",
     subgroup = "terrain",
     energy_required = 300,
     ingredients = {

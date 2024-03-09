@@ -146,6 +146,7 @@ data:extend({
   createEntity("ab-basic-ore-desalination-unit", "ab-basic-ore-desalination"),
   createEntity("ab-basic-ore-distillation-unit", "ab-basic-ore-distillation"),
   createEntity("ab-basic-ore-reduction-unit", "ab-basic-ore-reduction"),
+  createEntity("ab-fertilizer-distributor", "fertilizer"),
 
   createChemical("ab-wood-distillery", "ab-wood-distilling"),
   createChemical("ab-bio-refinery", "ab-biofuel-production"),
@@ -297,141 +298,9 @@ basic_bio_reactor.picture = {
 
 data:extend({basic_bio_reactor})
 
-
--- Add the biofuel generator to the game
-data:extend({
-    {
-        type = "assembling-machine",
-        name = "ab-fertilizer-distributor",
-        icon = "__base__/graphics/icons/beacon.png",
-        icon_size = 64,
-        icon_mipmaps = 4,
-        flags = {"placeable-player", "player-creation"},
-        minable = {mining_time = 0.2, result = "ab-fertilizer-distributor"},
-        max_health = 200,
-        corpse = "medium-remnants",
-        dying_explosion = "medium-explosion",
-        crafting_categories = {"fertilizer"},
-        crafting_speed = 1.25,
-        energy_usage = "20kW",
-        energy_source = {
-            type = "electric",
-            usage_priority = "secondary-input",
-            emissions_per_minute = 1
-        },
-        selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-        collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-        ingredient_count = 4,
-        vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
-        working_sound = {
-            sound = {
-                {filename = "__base__/sound/assembling-machine-t1-1.ogg", volume = 0.8},
-                {filename = "__base__/sound/assembling-machine-t1-2.ogg", volume = 0.8},
-            },
-            idle_sound = {filename = "__base__/sound/idle1.ogg", volume = 0.6},
-            apparent_volume = 1.5,
-        },
-        animation_list =
-        {
-          {
-            render_layer = "floor-mechanics",
-            always_draw = true,
-            animation =
-            {
-              layers =
-              {
-                {
-                  filename = "__base__/graphics/entity/beacon/beacon-bottom.png",
-                  width = 106,
-                  height = 96,
-                  shift = util.by_pixel(0, 1),
-                  hr_version =
-                  {
-                    filename = "__base__/graphics/entity/beacon/hr-beacon-bottom.png",
-                    width = 212,
-                    height = 192,
-                    scale = 0.5,
-                    shift = util.by_pixel(0.5, 1)
-                  }
-                },
-                {
-                  filename = "__base__/graphics/entity/beacon/beacon-shadow.png",
-                  width = 122,
-                  height = 90,
-                  draw_as_shadow = true,
-                  shift = util.by_pixel(12, 1),
-                  hr_version =
-                  {
-                    filename = "__base__/graphics/entity/beacon/hr-beacon-shadow.png",
-                    width = 244,
-                    height = 176,
-                    scale = 0.5,
-                    draw_as_shadow = true,
-                    shift = util.by_pixel(12.5, 0.5)
-                  }
-                }
-              }
-            }
-          },
-          {
-            render_layer = "object",
-            always_draw = true,
-            animation =
-            {
-              filename = "__base__/graphics/entity/beacon/beacon-top.png",
-              width = 48,
-              height = 70,
-              repeat_count = 45,
-              animation_speed = 0.5,
-              shift = util.by_pixel(3, -19),
-              hr_version =
-              {
-                filename = "__base__/graphics/entity/beacon/hr-beacon-top.png",
-                width = 96,
-                height = 140,
-                scale = 0.5,
-                repeat_count = 45,
-                animation_speed = 0.5,
-                shift = util.by_pixel(3, -19)
-              }
-            }
-          },
-          {
-            render_layer = "object",
-            apply_tint = true,
-            draw_as_sprite = true,
-            draw_as_light = true,
-            always_draw = false,
-            animation =
-            {
-              filename = "__base__/graphics/entity/beacon/beacon-light.png",
-              line_length = 9,
-              width = 56,
-              height = 94,
-              frame_count = 45,
-              animation_speed = 0.5,
-              shift = util.by_pixel(1, -18),
-              blend_mode = "additive",
-              hr_version =
-              {
-                filename = "__base__/graphics/entity/beacon/hr-beacon-light.png",
-                line_length = 9,
-                width = 110,
-                height = 186,
-                frame_count = 45,
-                animation_speed = 0.5,
-                scale = 0.5,
-                shift = util.by_pixel(0.5, -18),
-                blend_mode = "additive"
-              }
-            }
-          }
-        }
-    }
-})
 data:extend({
 {
-    type = "assembling-machine",
+    type = "beacon",
     name = "invisible-beacon",
     icon = "__base__/graphics/icons/beacon.png",
     icon_size = 64,
@@ -448,9 +317,14 @@ data:extend({
         usage_priority = "secondary-input",
         emissions_per_minute = 1
     },
+    distribution_effectivity = 1,
+    supply_area_distance = 6,
+    allowed_effects = {"consumption", "speed", "productivity", "pollution"},
+    module_specification = {
+        module_slots = 2
+    },
     selection_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    collision_box = {{-1.5, -1.5}, {1.5, 1.5}},
-    ingredient_count = 4,
+    collision_box = {{0, 0}, {0, 0}},
     vehicle_impact_sound = {filename = "__base__/sound/car-metal-impact.ogg", volume = 0.65},
     working_sound = {
         sound = {
