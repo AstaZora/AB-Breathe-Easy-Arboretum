@@ -346,7 +346,7 @@ data:extend({
         energy_required = 3,
         ingredients = {{"wood-veneer", 3}},
         result = "plywood",
-        result_count = 1,
+        result_count = 2,
     },
     
     -- Fiberboard (Made from sawdust and wood chips, pressed into boards)
@@ -360,7 +360,7 @@ data:extend({
             {"wood-chips", 10},
         },
         result = "fiberboard",
-        result_count = 1,
+        result_count = 2,
     },
     
     -- Hardwood Planks (Higher quality planks for construction and crafting)
@@ -422,7 +422,7 @@ data:extend({
             {"wood-chips", 10},
         },
         results = {
-            {type="fluid", name="wood-alcohol", amount=30},
+            {type="fluid", name="wood-alcohol", amount=50},
         },
     },
     
@@ -468,7 +468,7 @@ data:extend({
             {"softwood-lumber", 5},
         },
         result = "resin",
-        result_count = 3,
+        result_count = 1,
     },
     
     -- Wood Ash (Produced from burning wood residues, used in fertilizers and soaps)
