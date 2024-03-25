@@ -298,6 +298,54 @@ basic_bio_reactor.picture = {
 
 data:extend({basic_bio_reactor})
 
+
+local woodBurner = table.deepcopy(data.raw["burner-generator"]["burner-generator"])
+woodBurner.name = "ab-basic-wood-burner"
+woodBurner.icon = "__base__/graphics/icons/nuclear-reactor.png"
+woodBurner.icon_size = 64
+woodBurner.icon_mipmaps = 4
+woodBurner.minable = {mining_time = 0.2, result = "ab-basic-wood-burner"}
+woodBurner.max_health = 300
+woodBurner.max_power_output = "150kW"
+woodBurner.burner = {
+    type = "burner",
+    fuel_category = "chemical",
+    effectivity = 0.1,
+    fuel_inventory_size = 1,
+    emissions_per_minute = 0, -- Adjust this value based on how clean you want the generator to be
+    smoke = {
+        {
+            name = "smoke",
+            north_position = {0.7, -1.2},
+            south_position = {0.7, -1.2},
+            east_position = {0.7, -1.2},
+            west_position = {0.7, -1.2},
+            frequency = 20,
+            starting_vertical_speed = 0.08,
+            starting_frame_deviation = 60
+        }
+    }
+}
+
+-- Define the picture or animation of your basic bio-reactor here
+woodBurner.picture = {
+    filename = "__base__/graphics/entity/burner-generator/burner-generator.png",
+    priority = "extra-high",
+    width = 131,
+    height = 99,
+    shift = util.by_pixel(-0.5, -4.5),
+    hr_version = {
+        filename = "__base__/graphics/entity/burner-generator/hr-burner-generator.png",
+        priority = "extra-high",
+        width = 260,
+        height = 196,
+        shift = util.by_pixel(-0.5, -4.5),
+        scale = 0.5
+    }
+}
+
+data:extend({woodBurner})
+
 data:extend({
 {
     type = "beacon",

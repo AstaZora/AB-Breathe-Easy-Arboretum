@@ -749,6 +749,16 @@ data:extend({
     },
     {
         type = "item",
+        name = "ab-basic-wood-burner",
+        icon = "__base__/graphics/icons/assembling-machine-1.png",
+        icon_size = 64,
+        subgroup = "production-machine",
+        order = "a[assembling-machine-1]",
+        stack_size = 50,
+        place_result = "ab-basic-wood-burner"
+    },
+    {
+        type = "item",
         name = "ab-bio-press",
         icon = "__base__/graphics/icons/assembling-machine-1.png",
         icon_size = 64,

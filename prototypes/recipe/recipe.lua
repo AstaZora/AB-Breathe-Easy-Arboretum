@@ -709,7 +709,7 @@ data:extend({
         energy_required = 2,
         main_product = "gravel",
         ingredients = {{"stone", 5}},
-        results = {{"gravel", 3}, {"stone-dust", 2}},
+        results = {{"gravel", 12}},
     },
     
     -- Grinding
@@ -724,7 +724,17 @@ data:extend({
         result = "fine-stone-powder",
         result_count = 4,
     },
-    
+    {
+        type = "recipe",
+        name = "ab-grinding-stone-dust",
+        icon = "__base__/graphics/icons/stone.png",
+        icon_size = 64, icon_mipmaps = 4,
+        category = "ab-grinding",
+        energy_required = 3,
+        ingredients = {{"fine-stone-powder", 5}},
+        result = "stone-dust",
+        result_count = 4,
+    },
     -- Calcination
     {
         type = "recipe",
@@ -772,9 +782,9 @@ data:extend({
     category = "ab-blending",
     energy_required = 5,
     ingredients = {
-        {"gravel", 10},
+        {"gravel", 5},
         {"stone-dust", 5},
-        {"fine-stone-powder", 3},
+        {"fine-stone-powder", 5},
     },
     result = "blended-stone",
     result_count = 10,
@@ -1112,6 +1122,17 @@ data:extend({
         result = "ab-basic-bio-reactor",
         result_count = 1,
     },
+    --Basic Wood Burner
+    {
+        type = "recipe",
+        name = "ab-basic-wood-burner",
+        enabled = true,
+        category = "crafting",
+        energy_required = 1,
+        ingredients = {{"stone", 5}, {"wood", 10}},
+        result = "ab-basic-wood-burner",
+        result_count = 1,
+    },
     --Bio-Refinery
     {
         type = "recipe",
@@ -1121,6 +1142,26 @@ data:extend({
         energy_required = 1,
         ingredients = {{"stone", 5}, {"wood", 10}},
         result = "ab-bio-refinery",
+        result_count = 1,
+    },
+    {
+        type = "recipe",
+        name = "ab-blender",
+        enabled = true,
+        category = "crafting",
+        energy_required = 1,
+        ingredients = {{"stone", 5}, {"wood", 10}},
+        result = "ab-blender",
+    },
+    --Grindstone
+    {
+        type = "recipe",
+        name = "ab-grindstone",
+        enabled = true,
+        category = "crafting",
+        energy_required = 1,
+        ingredients = {{"stone", 5}, {"wood", 10}},
+        result = "ab-grindstone",
         result_count = 1,
     },
     --Bio-Plastics Plant
@@ -1412,6 +1453,17 @@ data:extend({
             {type = "fluid", name = "water", amount = 50, catalyst_amount = 50},
             {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
         }
+    },
+    {
+        type = "recipe",
+        name = "ab-solid-biofuel",
+        category = "ab-biofuel-production",
+        energy_required = 4,
+        ingredients = {
+            {type = "fluid", name = "basic-biofuel", amount = 100}
+        },
+        results = {{type = "item", name = "solid-biofuel", amount = 1}},
+        enabled = true,
     },
     --Tin Ore
     {
