@@ -560,6 +560,17 @@ data:extend({
             {type="fluid", name="bio-oil", amount=100},
         },
     },
+    --Lamp
+    {
+        type = "recipe",
+        name = "ab-lamp",
+        category = "crafting",
+        energy_required = 0.5,
+        ingredients = {{"wooden-boards", 2}, {"fiberboard-circuitry", 2}},
+        result = "small-lamp",
+        result_count = 1,
+        enabled = true
+    },
     --Science Stuff
     {
         type = "recipe",
@@ -1589,7 +1600,7 @@ for _, woodType in ipairs(woodTypes) do
         category = "ab-sawmilling",
         energy_required = 5,
         ingredients = {{woodType.."-wood", 1}},
-        result = "wood-planks",
+        result = "wooden-planks",
         result_count = 4,
         enabled = false -- Requires technology to unlock
     })
@@ -1697,7 +1708,7 @@ for _, fluid in ipairs(fluids) do
         type = "recipe",
         name = "ab-biofuel-" .. fluid,
         category = "ab-biofuel-production",
-        energy_required = 4,
+        energy_required = 1,
         ingredients = {
             {type = "fluid", name = fluid, amount = 10}
         },

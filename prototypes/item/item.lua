@@ -278,15 +278,6 @@ data:extend({
     },
     {
         type = "item",
-        name = "wood-planks",
-        icon = "__base__/graphics/icons/wood.png",
-        icon_size = 64,
-        subgroup = "raw-resource",
-        order = "c[wood]-k[hardwood-planks]",
-        stack_size = 200
-    },
-    {
-        type = "item",
         name = "hardwood-planks",
         icon = "__base__/graphics/icons/wood.png",
         icon_size = 64,
