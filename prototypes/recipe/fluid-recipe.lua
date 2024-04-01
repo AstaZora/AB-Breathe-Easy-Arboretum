@@ -33,7 +33,7 @@ data:extend({
         default_temperature = 25,
         max_temperature = 25,
         heat_capacity = "0.75KJ",
-        fuel_value = "1MJ",
+        fuel_value = "2MJ",
         base_color = {r=0.5, g=0.5, b=0.5},
         flow_color = {r=0.5, g=0.5, b=0.5},
         icon = "__base__/graphics/icons/fluid/water.png",

@@ -557,7 +557,7 @@ data:extend({
             {"wood-pulp", 10},
         },
         results = {
-            {type="fluid", name="bio-oil", amount=100},
+            {type="fluid", name="bio-oil", amount=400},
         },
     },
     --Lamp
