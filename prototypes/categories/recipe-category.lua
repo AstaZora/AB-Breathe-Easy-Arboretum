@@ -292,6 +292,10 @@ data:extend({
 		name = "ab-basic-ore-reduction",
 	},
 	{
+		type = "fuel-category",
+		name = "biological",
+	},
+	{
 		type = "item-group",
 		name = "ab-fluid-recipes",
 		icon = "__base__/graphics/technology/sulfur-processing.png",

@@ -8,7 +8,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "a[wood]-a[pine-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -19,7 +19,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "a[wood]-b[birch-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -30,7 +30,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "a[wood]-c[poplar-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -41,7 +41,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "a[wood]-d[willow-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     -- Tier 2: Mid Game
@@ -53,7 +53,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "b[wood]-a[oak-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -64,7 +64,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "b[wood]-b[maple-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -75,7 +75,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "b[wood]-c[spruce-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -86,7 +86,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "b[wood]-d[cedar-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     -- Tier 3: Advanced Game
@@ -98,7 +98,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "c[wood]-a[mahogany-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -109,7 +109,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "c[wood]-b[teak-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -120,7 +120,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "c[wood]-c[walnut-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -131,7 +131,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "c[wood]-d[ash-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     -- Tier 4: Late Game
@@ -143,7 +143,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "d[wood]-a[ebony-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -154,7 +154,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "d[wood]-b[rosewood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -165,7 +165,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "d[wood]-c[hickory-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -176,7 +176,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "d[wood]-d[bamboo]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     -- Tier 5: End Game
@@ -188,7 +188,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "e[wood]-a[balsa-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -199,7 +199,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "e[wood]-b[cherry-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -210,7 +210,7 @@ data:extend({
         subgroup = "raw-resource",
         order = "e[wood]-c[acacia-wood]",
         fuel_value = "2MJ",
-        fuel_category = "chemical",
+        fuel_category = "biological",
         stack_size = 200
     },
     {
@@ -1326,6 +1326,8 @@ data:extend({
         type = "item",
         name = "sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1335,6 +1337,8 @@ data:extend({
         type = "item",
         name = "pine-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1344,6 +1348,8 @@ data:extend({
         type = "item",
         name = "birch-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1353,6 +1359,8 @@ data:extend({
         type = "item",
         name = "oak-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1362,6 +1370,8 @@ data:extend({
         type = "item",
         name = "maple-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1371,6 +1381,8 @@ data:extend({
         type = "item",
         name = "willow-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1380,6 +1392,8 @@ data:extend({
         type = "item",
         name = "poplar-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1389,6 +1403,8 @@ data:extend({
         type = "item",
         name = "cedar-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1398,6 +1414,8 @@ data:extend({
         type = "item",
         name = "spruce-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1407,6 +1425,8 @@ data:extend({
         type = "item",
         name = "fir-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1416,6 +1436,8 @@ data:extend({
         type = "item",
         name = "hemlock-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1425,6 +1447,8 @@ data:extend({
         type = "item",
         name = "chestnut-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1434,6 +1458,8 @@ data:extend({
         type = "item",
         name = "ash-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1443,6 +1469,8 @@ data:extend({
         type = "item",
         name = "hickory-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1452,6 +1480,8 @@ data:extend({
         type = "item",
         name = "walnut-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1461,6 +1491,8 @@ data:extend({
         type = "item",
         name = "mahogany-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1470,6 +1502,8 @@ data:extend({
         type = "item",
         name = "teak-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1479,6 +1513,8 @@ data:extend({
         type = "item",
         name = "ebony-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1488,6 +1524,8 @@ data:extend({
         type = "item",
         name = "rose-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1497,6 +1535,8 @@ data:extend({
         type = "item",
         name = "bamboo-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1506,6 +1546,8 @@ data:extend({
         type = "item",
         name = "balsa-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1515,6 +1557,8 @@ data:extend({
         type = "item",
         name = "cherry-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1524,6 +1568,8 @@ data:extend({
         type = "item",
         name = "acacia-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",
@@ -1533,6 +1579,8 @@ data:extend({
         type = "item",
         name = "olive-sapling",
         icon = "__AB-Breathe-Easy-Arboretum__/graphics/icons/sapling.png",
+        fuel_value = "1MJ",
+        fuel_category = "biological",
         icon_size = 128,
         subgroup = "raw-resource",
         order = "c[wood]-ab[wood-pulp]",

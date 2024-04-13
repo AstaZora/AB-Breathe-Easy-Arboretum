@@ -1389,7 +1389,7 @@ data:extend({
         catalyst = "mineralized-water",
         ingredients = {{type = "fluid", name = "mineralized-water", amount = 100, catalyst_amount = 100}},
         results = {
-            {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1},
+            {type = "item", name = "mixed-ore-powder", probability = 0.05, amount = 1},
             {type = "fluid", name = "ore-waste-water", amount = 50, catalyst_amount = 50}
         }
     },
@@ -1406,7 +1406,7 @@ data:extend({
         ingredients = {{type = "fluid", name = "ore-waste-water", amount = 20, catalyst_amount = 20}},
         results = {
             {type = "fluid", name = "ore-slush", amount = 10, catalyst_amount = 10},
-            {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
+            {type = "item", name = "mixed-ore-powder", probability = 0.05, amount = 1}
         }
     },
     {
@@ -1425,7 +1425,7 @@ data:extend({
         results = {
             {type = "fluid", name = "water", amount = 50, catalyst_amount = 50},
             {type = "fluid", name = "ore-slurry", amount = 10, catalyst_amount = 10},
-            {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
+            {type = "item", name = "mixed-ore-powder", probability = 0.05, amount = 1}
         }
     },
     {
@@ -1444,7 +1444,7 @@ data:extend({
         results = {
             {type = "fluid", name = "water", amount = 50, catalyst_amount = 50},
             {type = "fluid", name = "ore-concentrate", amount = 10, catalyst_amount = 10},
-            {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
+            {type = "item", name = "mixed-ore-powder", probability = 0.05, amount = 1}
         }
     },
     {
@@ -1462,7 +1462,7 @@ data:extend({
         },
         results = {
             {type = "fluid", name = "water", amount = 50, catalyst_amount = 50},
-            {type = "item", name = "mixed-ore-powder", probability = 0.02, amount = 1}
+            {type = "item", name = "mixed-ore-powder", probability = 0.05, amount = 1}
         }
     },
     {
