@@ -28,15 +28,9 @@ end)
 script.on_event({defines.events.on_built_entity, defines.events.on_robot_built_entity}, function(event)
     local entity = event.created_entity
     if entity and entity.name == 'ab-fertilizer-distributor' then
-        local entity_box = entity.prototype.selection_box
-        local entity_size = {x = entity_box.right_bottom.x - entity_box.left_top.x, y = entity_box.right_bottom.y - entity_box.left_top.y}
-
-        local beacon_box = game.entity_prototypes['invisible-beacon'].selection_box
-        local beacon_size = {x = beacon_box.right_bottom.x - beacon_box.left_top.x, y = beacon_box.right_bottom.y - beacon_box.left_top.y}
-
         local beacon = entity.surface.create_entity({
             name = 'invisible-beacon',
-            position = {x = entity.position.x + (entity_size.x - beacon_size.x) / 2, y = entity.position.y + (entity_size.y - beacon_size.y) / 2},
+            position = {x = entity.position.x, y = entity.position.y},
             force = entity.force
         })
         if beacon then

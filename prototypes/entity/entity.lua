@@ -353,7 +353,7 @@ data:extend({
     icon = "__base__/graphics/icons/beacon.png",
     icon_size = 64,
     icon_mipmaps = 4,
-    flags = {"placeable-player", "player-creation"},
+    flags = {"placeable-player", "player-creation", "placeable-off-grid"},
     max_health = 200,
     corpse = "medium-remnants",
     dying_explosion = "medium-explosion",
